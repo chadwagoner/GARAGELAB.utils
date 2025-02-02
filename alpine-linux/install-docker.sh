@@ -17,9 +17,9 @@ sleep 10
 
 ### CREATE DEFAULT DOCKER NETWORKS
 doas docker network create db
-doas docker network create internal
+doas docker network create management
 doas docker network create proxy
 
-### CREATE DEFAULT SERVICE LOCATION
+### CREATE DEFAULT SERVICE DIRECTORY
 doas mkdir -p /opt/services
 doas chown alpine:alpine /opt/services
