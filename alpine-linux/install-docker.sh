@@ -16,9 +16,10 @@ doas addgroup alpine docker
 sleep 10
 
 ### CREATE DEFAULT DOCKER NETWORKS
-doas docker network create db
-doas docker network create management
-doas docker network create proxy
+doas docker network create db >/dev/null 2>&1
+doas docker network create internal >/dev/null 2>&1
+doas docker network create management >/dev/null 2>&1
+doas docker network create proxy >/dev/null 2>&1
 
 ### CREATE DEFAULT SERVICE DIRECTORY
 doas mkdir -p /opt/services
