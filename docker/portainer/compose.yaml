@@ -1,0 +1,19 @@
+services:
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    restart: unless-stopped
+    networks:
+      - internal
+    ports:
+      - 9443:9443
+    labels:
+      com.centurylinklabs.watchtower.enable: true
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /opt/services/portainer/data:/data
+
+networks:
+  internal:
+    external: true
