@@ -4,7 +4,7 @@ services:
     container_name: semaphore
     restart: unless-stopped
     networks:
-      - internal
+      - management
     ports:
       - 3030:3030
     environment:
@@ -22,5 +22,5 @@ services:
       - /opt/services/semaphore/data:/var/lib/semaphore
 
 networks:
-  internal:
+  management:
     external: true
