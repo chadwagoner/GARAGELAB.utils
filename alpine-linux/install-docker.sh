@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ### INSTALL DOCKER
-doas apk add -U docker docker-cli-compose
+doas apk add -U docker docker-cli-compose --quiet
 
 ### ENABLE BOOT START
 doas rc-update add docker default
