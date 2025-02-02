@@ -4,7 +4,7 @@ services:
     container_name: portainer
     restart: unless-stopped
     networks:
-      - internal
+      - management
     ports:
       - 9443:9443
     labels:
@@ -15,5 +15,5 @@ services:
       - /opt/services/portainer/data:/data
 
 networks:
-  internal:
+  management:
     external: true
