@@ -12,6 +12,9 @@ doas rc-service docker start
 ### ADD DOCKER GROUP TO USER
 doas addgroup alpine docker
 
+### SLEEP TO ALLOW DOCKER TO START
+sleep 10
+
 ### CREATE DEFAULT DOCKER NETWORKS
 doas docker network create db
 doas docker network create internal
