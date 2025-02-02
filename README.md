@@ -1,31 +1,53 @@
 # GARAGELAB.utils
 
-## BASE OS
+## ALPINE LINUX
 
-### ALPINE LINUX
+### INSTALL
 
-#### INSTALL-BASE
+#### BASE
 
 ```bash
 curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/alpine-linux/install-base.sh | sh
 ```
 
-#### INSTALL-DOCKER
+#### DOCKER
 
 ```bash
 curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/alpine-linux/install-docker.sh | sh
 ```
 
-#### INSTALL-DRIVER-INTEL
+#### DRIVER-INTEL
 
 ```bash
 curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/alpine-linux/install-driver-intel.sh | sh
 ```
 
-#### INSTALL-NFS
+#### NFS
 
 ```bash
 curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/alpine-linux/install-nfs.sh | sh
+```
+
+### CONFIGURE
+
+#### NFS-BACKUP
+
+```bash
+curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/alpine-linux/configure-nfs-backup.sh | sh
+```
+
+#### NFS-MEDIA
+
+```bash
+curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/alpine-linux/configure-nfs-media.sh | sh
+```
+
+### UPGRADE
+
+#### APK
+
+```bash
+curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/alpine-linux/upgrade-apk.sh | sh
 ```
 
 ## SERVICES
