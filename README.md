@@ -16,6 +16,12 @@ doas apk add -U curl
 curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/alpine-linux/install-base.sh | sh
 ```
 
+#### BLUETOOTH
+
+```bash
+curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/alpine-linux/install-bluetooth.sh | sh
+```
+
 #### DOCKER
 
 ```bash
