@@ -2,6 +2,12 @@
 
 ## ALPINE LINUX
 
+### PRE-REQUISITE
+
+```bash
+doas apk add -U curl
+```
+
 ### INSTALL
 
 #### BASE
