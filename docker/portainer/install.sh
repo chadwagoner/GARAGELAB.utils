@@ -1,7 +1,6 @@
 #!/bin/sh
 
 ### MAKE PORTAINER DIRECTORY
-mkdir -p /opt/services/portainer
 mkdir -p /opt/services/portainer/data
 
 ### GET COMPOSE FILE
