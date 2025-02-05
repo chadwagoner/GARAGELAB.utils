@@ -3,8 +3,8 @@
 # NOTE: THIS DOESN'T WORK AS INTENDED, NO USER INPUT AND BAD ENTRY TO FSTAB
 
 ### USER INPUT VARIABLES
-read -p 'NFS SERVER IP ADDRESS: ' nfs_server
-read -p 'NFS VOLUME: ' nfs_volume
+read -p 'NFS SERVER IP ADDRESS: ' nfs_server < /dev/tty
+read -p 'NFS VOLUME: ' nfs_volume < /dev/tty
 
 ### CREATE BACKUP DIRECTORY
 doas mkdir -p /mnt/backup
