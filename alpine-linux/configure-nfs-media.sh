@@ -2,7 +2,7 @@
 
 ### USER INPUT VARIABLES
 read -p 'NFS SERVER IP ADDRESS: ' nfs_server < /dev/tty
-read -p 'NFS VOLUME: ' nfs_volume < /dev/tty
+read -p 'NFS MEDIA VOLUME: ' nfs_volume < /dev/tty
 
 ### CREATE MEDIA DIRECTORY
 doas mkdir -p /mnt/media
