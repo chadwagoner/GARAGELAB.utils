@@ -62,6 +62,16 @@ curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.co
 curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/alpine-linux/upgrade-apk.sh | sh
 ```
 
+## SYNOLOGY DSM
+
+### INSTALL
+
+#### DOCKER COMPOSE
+
+```bash
+curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/dsm/install-docker-compose.sh | sh
+```
+
 ## SERVICES
 
 ### PORTAINER
