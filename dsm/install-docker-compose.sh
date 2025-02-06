@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 ### INSTALL DOCKER COMPOSE
 DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
