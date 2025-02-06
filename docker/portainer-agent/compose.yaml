@@ -1,0 +1,20 @@
+services:
+  portainer-agent:
+    image: portainer/agent:latest
+    container_name: portainer-agent
+    restart: unless-stopped
+    networks:
+      - management
+    ports:
+      - 9001:9001
+    labels:
+      com.centurylinklabs.watchtower.enable: true
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${VOLUME_PATH}:/var/lib/docker/volumes
+      - /:/host
+
+networks:
+  management:
+    external: true
