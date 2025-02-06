@@ -64,12 +64,12 @@ curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.co
 
 ## SYNOLOGY DSM
 
-### INSTALL
+### SETUP
 
-#### DOCKER COMPOSE
+#### DOCKER
 
 ```bash
-curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/dsm/install-docker-compose.sh | sh
+curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/dsm/setup-docker.sh | sh
 ```
 
 ## SERVICES
