@@ -80,6 +80,12 @@ curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.co
 curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/portainer/install.sh | sh
 ```
 
+### PORTAINER-AGENT
+
+```bash
+curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/portainer-agent/install.sh | sh
+```
+
 ### SEMAPHORE
 
 ```bash
