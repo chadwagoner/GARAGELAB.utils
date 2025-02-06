@@ -6,7 +6,7 @@ services:
     networks:
       - management
     ports:
-      - 9001:9001
+      - 9443:9001
     labels:
       com.centurylinklabs.watchtower.enable: true
     volumes:
