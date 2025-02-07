@@ -40,6 +40,12 @@ curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.co
 curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/alpine-linux/install-nfs.sh | sh
 ```
 
+#### PATCHWORK
+
+```bash
+curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/alpine-linux/install-patchwork.sh | sh
+```
+
 ### CONFIGURE
 
 #### NFS-BACKUP
