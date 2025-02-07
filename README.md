@@ -62,6 +62,14 @@ curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.co
 curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/alpine-linux/upgrade-apk.sh | sh
 ```
 
+### PROXMOX
+
+#### INSTALL QEMU-GUEST-AGENT
+
+```bash
+curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/alpine-linux/proxmox-install-qemu-guest-agent.sh | sh
+```
+
 ## SYNOLOGY DSM
 
 ### SETUP
