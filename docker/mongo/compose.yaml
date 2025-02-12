@@ -1,0 +1,17 @@
+services:
+  mongo:
+    image: mongo:8.0
+    container_name: mongo
+    restart: unless-stopped
+    networks:
+      - db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ${SERVICE_PATH}/mongo/data:/data/db
+
+networks:
+  db:
+    external: true
