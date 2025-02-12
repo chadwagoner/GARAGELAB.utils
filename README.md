@@ -88,6 +88,12 @@ curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.co
 
 ## SERVICES
 
+### MONGO
+
+```bash
+curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/mongo/install.sh | sh
+```
+
 ### PORTAINER
 
 ```bash
