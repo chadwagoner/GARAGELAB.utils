@@ -88,6 +88,12 @@ curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.co
 
 ## SERVICES
 
+### KOMODO
+
+```bash
+curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/komodo/install.sh | sh
+```
+
 ### MONGO
 
 ```bash
