@@ -1,2 +1,5 @@
-http://dl-cdn.alpinelinux.org/alpine/v3.21/main
-http://dl-cdn.alpinelinux.org/alpine/v3.21/community
+https://dl-cdn.alpinelinux.org/alpine/v3.22/main
+https://dl-cdn.alpinelinux.org/alpine/v3.22/community
+
+@edge-main https://dl-cdn.alpinelinux.org/alpine/edge/main
+@edge-community https://dl-cdn.alpinelinux.org/alpine/edge/community
