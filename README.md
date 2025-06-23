@@ -46,6 +46,12 @@ curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.co
 curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/alpine-linux/install-patchwork.sh | sh
 ```
 
+#### TAILSCALE
+
+```bash
+curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/alpine-linux/install-tailscale.sh | sh
+```
+
 ### CONFIGURE
 
 #### NFS-BACKUP
@@ -58,6 +64,12 @@ curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.co
 
 ```bash
 curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/alpine-linux/configure-nfs-media.sh | sh
+```
+
+#### TAILSCALE
+
+```bash
+curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/alpine-linux/configure-tailscale.sh | sh
 ```
 
 ### UPGRADE
