@@ -15,5 +15,8 @@ doas apk upgrade -U --quiet
 ### INSTALL BASE PACKAGES
 doas apk add -U htop vim --quiet
 
+### RUN SYNC BEFORE REBOOT
+doas sync
+
 ### REBOOT
 doas reboot
