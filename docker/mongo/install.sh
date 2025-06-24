@@ -21,7 +21,7 @@ mkdir -p $service_path/$service/data
 echo -e "SERVICE: \"$service\"\nSERVICE_PATH: \"$service_path\"\nMONGO_USERNAME: \"$mongo_username\"\nMONGO_PASSWORD: \"$mongo_password\"" | tee $service_path/$service/.env >/dev/null
 
 ### GET COMPOSE FILE
-curl -sL -o $service_path/$service/compose.yaml -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/mongo/compose.yaml
+curl -sL -o $service_path/$service/compose.yaml -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/$service/compose.yaml
 
 ### START MONGO
 docker compose -f $service_path/$service/compose.yaml up -d
