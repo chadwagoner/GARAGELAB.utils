@@ -1,0 +1,24 @@
+services:
+  pocket-id:
+    image: ghcr.io/pocket-id/pocket-id:v1.4.1
+    container_name: pocket-id
+    restart: unless-stopped
+    networks:
+      - proxy
+    ports:
+      - 1411:1411
+    labels:
+      tsdproxy.enable: "true"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ${SERVICE_PATH}/${SERVICE}/data:/app/data
+    healthcheck:
+      test: "curl -f http://localhost:1411/healthz"
+      interval: 1m30s
+      timeout: 5s
+      retries: 2
+      start_period: 10s
+
+networks:
+  proxy:
+    external: true
