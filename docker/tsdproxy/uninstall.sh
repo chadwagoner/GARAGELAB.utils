@@ -1,0 +1,19 @@
+#!/bin/bash
+
+### GLOBAL VARIABLES
+service='tsdproxy'
+
+### USER INPUT VARIABLES
+read -p 'SERVICE PATH [/opt/services]: ' service_path < /dev/tty
+
+### SET DEFAULT VALUES IF BLANK
+service_path=${service_path:-'/opt/services'}
+
+### STOP TSDPROXY
+docker compose -f $service_path/$service/compose.yaml down --rmi all --volumes
+
+### REMOVE TSDPROXY SECRET
+docker secret rm tailscale_authkey
+
+### REMOVE TSDPROXY SERVICE FILES/DIRECTORIES
+rm -rf $service_path/$service

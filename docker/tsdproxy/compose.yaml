@@ -1,0 +1,26 @@
+services:
+  tsdproxy:
+    image: ghcr.io/almeidapaulopt/tsdproxy:2.0.0-beta4
+    container_name: tsdproxy
+    restart: unless-stopped
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - proxy
+    ports:
+      - "8080:8080"
+    labels:
+      komodo.skip:
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${SERVICE_PATH}/${SERVICE}/data:/data
+      - ${SERVICE_PATH}/${SERVICE}/config:/config
+
+networks:
+  proxy:
+    external: true
+
+secrets:
+  tailscale_authkey:
+    external: true
