@@ -13,7 +13,7 @@ service_path=${service_path:-'/opt/services'}
 mongo_username=${mongo_username:-'mongo'}
 mongo_password=${mongo_password:-'changeme123'}
 
-### MAKE MONGODB DIRECTORY
+### MAKE MONGO DIRECTORY
 mkdir -p $service_path/$service
 mkdir -p $service_path/$service/data
 
