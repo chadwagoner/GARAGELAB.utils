@@ -1,6 +1,6 @@
 services:
   mongo:
-    image: mongo:8.0
+    image: mongo:8.0.10
     container_name: mongo
     restart: unless-stopped
     command: --quiet --wiredTigerCacheSizeGB 0.25
@@ -10,11 +10,11 @@ services:
       MONGO_INITDB_ROOT_USERNAME: ${MONGO_USERNAME}
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
     labels:
-      komodo.skip: 
+      komodo.skip:
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - ${SERVICE_PATH}/mongo/data:/data/db
-      - ${SERVICE_PATH}/mongo/config:/data/configdb
+      - ${SERVICE_PATH}/${SERVICE}/data:/data/db
+      - ${SERVICE_PATH}/${SERVICE}/config:/data/configdb
 
 networks:
   db:
