@@ -126,6 +126,26 @@ curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.co
 curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/mongo/update.sh | sh
 ```
 
+### POCKET-ID
+
+#### INSTALL
+
+```bash
+curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/pocket-id/install.sh | sh
+```
+
+#### UNINSTALL
+
+```bash
+curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/pocket-id/uninstall.sh | sh
+```
+
+#### UPDATE
+
+```bash
+curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/pocket-id/update.sh | sh
+```
+
 ### PORTAINER
 
 ```bash
