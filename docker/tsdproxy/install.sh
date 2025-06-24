@@ -5,16 +5,17 @@ service='tsdproxy'
 
 ### USER INPUT VARIABLES
 read -p 'SERVICE PATH [/opt/services]: ' service_path < /dev/tty
-read -p 'TAILSCALE AUTHKEY [REQUIRED]: ' tailscale_authkey < /dev/tty
+read -p 'TAILSCALE AUTHKEY [OPTIONAL]: ' tailscale_authkey < /dev/tty
 
 ### SET DEFAULT VALUES IF BLANK
 service_path=${service_path:-'/opt/services'}
 
 ### VALIDATE REQUIRED VARIABLES
-if [[ -z $tailscale_authkey ]]; then
-  echo "ERROR: TAILSCALE AUTHKEY REQUIRED... Exiting"
-  exit 1
-fi
+### NOTE: supposedly no authkey uses OAuth, testing before removing completely
+# if [[ -z $tailscale_authkey ]]; then
+#   echo "ERROR: TAILSCALE AUTHKEY REQUIRED... Exiting"
+#   exit 1
+# fi
 
 ### MAKE TSDPROXY DIRECTORY
 mkdir -p $service_path/$service
