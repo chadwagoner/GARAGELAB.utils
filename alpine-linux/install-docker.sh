@@ -22,5 +22,9 @@ doas docker network create management >/dev/null 2>&1
 doas docker network create proxy >/dev/null 2>&1
 
 ### CREATE DEFAULT SERVICE DIRECTORY
-doas mkdir -p /opt/services/downloads
+doas mkdir -p /opt/downloads
+doas mkdir -p /opt/services
+
+### ENSURE CORRECT PERMISSIONS
+doas chown -R alpine:alpine /opt/downloads
 doas chown -R alpine:alpine /opt/services
