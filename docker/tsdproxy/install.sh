@@ -18,7 +18,8 @@ fi
 
 ### MAKE TSDPROXY DIRECTORY
 mkdir -p $service_path/$service
-mkdir -p $service_path/$service/{config,data}
+mkdir -p $service_path/$service/config
+mkdir -p $service_path/$service/data
 
 ### CREATE .ENV
 cat > $service_path/$service/.env <<EOF
@@ -37,7 +38,8 @@ docker:
 tailscale:
   providers:
     default:
-      authKeyFile: "/run/secrets/tailscale_authkey"
+      authKey: "$tailscale_authkey"
+      authKeyFile: ""
       controlUrl: https://controlplane.tailscale.com
   dataDir: /data/
 http:
