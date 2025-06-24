@@ -18,7 +18,12 @@ mkdir -p $service_path/$service
 mkdir -p $service_path/$service/data
 
 ### CREATE .ENV
-echo -e "SERVICE: \"$service\"\nSERVICE_PATH: \"$service_path\"\nMONGO_USERNAME: \"$mongo_username\"\nMONGO_PASSWORD: \"$mongo_password\"" | tee $service_path/$service/.env >/dev/null
+cat > $service_path/$service/.env <<EOF
+MONGO_PASSWORD: $mongo_password
+MONGO_USERNAME: $mongo_username
+SERVICE: $service
+SERVICE_PATH: $service_path
+EOF
 
 ### GET COMPOSE FILE
 curl -sL -o $service_path/$service/compose.yaml -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/$service/compose.yaml
