@@ -143,3 +143,23 @@ curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.co
 ```bash
 curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/semaphore/install.sh | sh
 ```
+
+### TSDPROXY
+
+#### INSTALL
+
+```bash
+curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/tsdproxy/install.sh | sh
+```
+
+#### UNINSTALL
+
+```bash
+curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/tsdproxy/uninstall.sh | sh
+```
+
+#### UPDATE
+
+```bash
+curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/tsdproxy/update.sh | sh
+```
