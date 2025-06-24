@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 ### GLOBAL VARIABLES
 service='tsdproxy'
