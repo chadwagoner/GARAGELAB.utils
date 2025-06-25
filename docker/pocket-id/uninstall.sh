@@ -9,8 +9,8 @@ read -p 'SERVICE PATH [/opt/services]: ' service_path < /dev/tty
 ### SET DEFAULT VALUES IF BLANK
 service_path=${service_path:-'/opt/services'}
 
-### STOP POCKET-ID
+### STOP SERVICE
 docker compose -f $service_path/$service/compose.yaml down --rmi all --volumes
 
-### REMOVE POCKET-ID SERVICE FILES/DIRECTORIES
+### REMOVE SERVICE FILES/DIRECTORIES
 rm -rf $service_path/$service
