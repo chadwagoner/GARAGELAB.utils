@@ -19,5 +19,5 @@ services:
 networks:
   db:
     external: true
-  internal:
+  proxy:
     external: true
