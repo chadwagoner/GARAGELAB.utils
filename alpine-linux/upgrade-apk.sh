@@ -6,6 +6,9 @@ doas curl -sL -o /etc/apk/repositories -H 'Cache-Control: no-cache, no-store' ht
 ### UPDATE OS
 doas apk upgrade -U --quiet
 
+### RUN SYNC BEFORE REBOOT
+doas sync
+
 ### SLEEP
 sleep 60
 
