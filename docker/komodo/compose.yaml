@@ -1,6 +1,6 @@
 services:
   komodo:
-    image: ghcr.io/moghtech/komodo:latest
+    image: ghcr.io/moghtech/komodo-core:1.18.4
     container_name: komodo
     restart: unless-stopped
     networks:
