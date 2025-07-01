@@ -10,6 +10,7 @@ services:
     ports:
       - 1411:1411
     labels:
+      komodo.skip:
       tsdproxy.enable: "true"
     volumes:
       - /etc/localtime:/etc/localtime:ro
