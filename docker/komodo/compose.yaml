@@ -3,6 +3,8 @@ services:
     image: ghcr.io/moghtech/komodo-core:1.18.4
     container_name: komodo
     restart: unless-stopped
+    depends_on:
+      - mongo
     networks:
       - db
       - proxy
@@ -15,6 +17,23 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - ${SERVICE_PATH}/${SERVICE}/repo-cache:/repo-cache
       - ${SERVICE_PATH}/${SERVICE}/syncs:/syncs
+
+  mongo:
+    image: mongo:8.0.11
+    container_name: mongo
+    restart: unless-stopped
+    command: --quiet --wiredTigerCacheSizeGB 0.25
+    networks:
+      - db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${KOMODO_DATABASE_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${KOMODO_DATABASE_PASSWORD}
+    labels:
+      komodo.skip:
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ${SERVICE_PATH}/${SERVICE}/mongo/data:/data/db
+      - ${SERVICE_PATH}/${SERVICE}/mongo/config:/data/configdb
 
 networks:
   db:

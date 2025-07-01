@@ -24,6 +24,9 @@ fi
 mkdir -p $service_path/$service
 mkdir -p $service_path/$service/repo-cache
 mkdir -p $service_path/$service/syncs
+mkdir -p $service_path/$service/mongo
+mkdir -p $service_path/$service/mongo/data
+mkdir -p $service_path/$service/mongo/config
 
 ### CREATE .ENV
 cat > $service_path/$service/.env <<EOF
