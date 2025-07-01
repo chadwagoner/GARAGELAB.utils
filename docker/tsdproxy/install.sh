@@ -5,7 +5,8 @@ service='tsdproxy'
 
 ### USER INPUT VARIABLES
 read -p 'SERVICE PATH [/opt/services]: ' service_path < /dev/tty
-read -p 'TAILSCALE AUTHKEY [OPTIONAL]: ' tailscale_authkey < /dev/tty
+read -p 'TAILSCALE OAUTH ID [OPTIONAL]: ' tailscale_oauth_id < /dev/tty
+read -p 'TAILSCALE OAUTH SECRET [OPTIONAL]: ' tailscale_oauth_secret < /dev/tty
 
 ### SET DEFAULT VALUES IF BLANK
 service_path=${service_path:-'/opt/services'}
@@ -39,8 +40,11 @@ docker:
 tailscale:
   providers:
     default:
-      authKey: "$tailscale_authkey"
+      clientId: "$tailscale_oauth_id"
+      clientSecret: "$tailscale_oauth_secret"
+      authKey: ""
       authKeyFile: ""
+      tags: "tag:proxy"
       controlUrl: https://controlplane.tailscale.com
   dataDir: /data/
 http:
