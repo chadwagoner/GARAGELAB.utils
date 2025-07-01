@@ -102,28 +102,22 @@ curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.co
 
 ### KOMODO
 
-```bash
-curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/komodo/install.sh | sh
-```
-
-### MONGO
-
 #### INSTALL
 
 ```bash
-curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/mongo/install.sh | sh
+curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/komodo/install.sh | sh
 ```
 
 #### UNINSTALL
 
 ```bash
-curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/mongo/uninstall.sh | sh
+curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/komodo/uninstall.sh | sh
 ```
 
 #### UPDATE
 
 ```bash
-curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/mongo/update.sh | sh
+curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/komodo/update.sh | sh
 ```
 
 ### POCKET-ID
@@ -144,24 +138,6 @@ curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.co
 
 ```bash
 curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/pocket-id/update.sh | sh
-```
-
-### PORTAINER
-
-```bash
-curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/portainer/install.sh | sh
-```
-
-### PORTAINER-AGENT
-
-```bash
-curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/portainer-agent/install.sh | sh
-```
-
-### SEMAPHORE
-
-```bash
-curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/semaphore/install.sh | sh
 ```
 
 ### TSDPROXY
