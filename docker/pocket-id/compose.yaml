@@ -12,6 +12,9 @@ services:
     labels:
       komodo.skip:
       tsdproxy.enable: "true"
+      tsdproxy.name: "id"
+      tsdproxy.autodetect: "false"
+      tsdproxy.port.1: "443/https:1411/http"
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ${SERVICE_PATH}/${SERVICE}/data:/app/data
