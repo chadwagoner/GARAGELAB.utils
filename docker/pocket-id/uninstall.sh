@@ -13,4 +13,4 @@ service_path=${service_path:-'/opt/services'}
 docker compose -f $service_path/$service/compose.yaml down --rmi all --volumes
 
 ### REMOVE SERVICE FILES/DIRECTORIES
-rm -rf $service_path/$service
+doas rm -rf $service_path/$service
