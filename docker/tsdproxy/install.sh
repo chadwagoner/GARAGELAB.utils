@@ -5,8 +5,8 @@ service='tsdproxy'
 
 ### USER INPUT VARIABLES
 read -p 'SERVICE PATH [/opt/services]: ' service_path < /dev/tty
-read -p 'TAILSCALE OAUTH ID [OPTIONAL]: ' tailscale_oauth_id < /dev/tty
-read -p 'TAILSCALE OAUTH SECRET [OPTIONAL]: ' tailscale_oauth_secret < /dev/tty
+read -p 'TAILSCALE OAUTH CLIENT ID [OPTIONAL]: ' tailscale_oauth_id < /dev/tty
+read -p 'TAILSCALE OAUTH CLIENT SECRET [OPTIONAL]: ' tailscale_oauth_secret < /dev/tty
 
 ### SET DEFAULT VALUES IF BLANK
 service_path=${service_path:-'/opt/services'}
