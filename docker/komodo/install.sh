@@ -7,6 +7,7 @@ service='komodo'
 read -p 'SERVICE PATH [/opt/services]: ' service_path < /dev/tty
 read -p 'MONGO USERNAME [mongo]: ' mongo_username < /dev/tty
 read -p 'MONGO PASSWORD [changeme123]: ' mongo_password < /dev/tty
+read -p 'KOMODO PASSKEY (default: changeme123): ' komodo_passkey < /dev/tty
 read -p 'APP URL [REQUIRED]: ' app_url < /dev/tty
 read -p 'ENABLE OIDC [OPTIONAL] (default: false): ' oidc_enable < /dev/tty
 
@@ -14,6 +15,7 @@ read -p 'ENABLE OIDC [OPTIONAL] (default: false): ' oidc_enable < /dev/tty
 service_path=${service_path:-'/opt/services'}
 mongo_username=${mongo_username:-'mongo'}
 mongo_password=${mongo_password:-'changeme123'}
+komodo_passkey=${komodo_passkey:-'changeme123'}
 oidc_enable=${oidc_enable:-false}
 
 ### OIDC VARIABLES
@@ -56,7 +58,7 @@ KOMODO_HOST: $app_url
 KOMODO_JWT_SECRET: "a_random_jwt_secret"
 KOMODO_JWT_TTL: "1-day"
 KOMODO_MONITORING_INTERVAL: "15-sec"
-KOMODO_PASSKEY: "a_random_passkey"
+KOMODO_PASSKEY: $komodo_passkey
 KOMODO_RESOURCE_POLL_INTERVAL: "1-hr"
 KOMODO_TITLE: "Komodo"
 KOMODO_TRANSPARENT_MODE: false
