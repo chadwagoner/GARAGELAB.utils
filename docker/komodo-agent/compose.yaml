@@ -1,0 +1,37 @@
+services:
+  komodo-agent:
+    image: ghcr.io/moghtech/komodo-periphery:1.18.4
+    container_name: komodo-agent
+    restart: unless-stopped
+    env_file:
+      - .env
+    networks:
+      - management
+    ports:
+      - 8120:8120
+    labels:
+      komodo.skip:
+
+    ## https://komo.do/docs/connect-servers#configuration
+    environment:
+      PERIPHERY_ROOT_DIRECTORY: ${PERIPHERY_ROOT_DIRECTORY:-/etc/komodo}
+      ## Pass the same passkey as used by the Komodo Core connecting to this Periphery agent.
+      PERIPHERY_PASSKEYS: abc123
+      ## Make server run over https
+      PERIPHERY_SSL_ENABLED: true
+      ## Specify whether to disable the terminals feature
+      ## and disallow remote shell access (inside the Periphery container).
+      PERIPHERY_DISABLE_TERMINALS: false
+      ## If the disk size is overreporting, can use one of these to
+      ## whitelist / blacklist the disks to filter them, whichever is easier.
+      ## Accepts comma separated list of paths.
+      ## Usually whitelisting just /etc/hostname gives correct size for single root disk.
+      PERIPHERY_INCLUDE_DISK_MOUNTS: /etc/hostname
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /proc:/proc
+      - ${SERVICE_PATH}/${SERVICE}:${SERVICE_PATH}/${SERVICE}
+
+networks:
+  management:
+    external: true
