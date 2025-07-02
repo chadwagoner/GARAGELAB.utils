@@ -120,6 +120,26 @@ curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.co
 curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/komodo/update.sh | sh
 ```
 
+### KOMODO-AGENT
+
+#### INSTALL
+
+```bash
+curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/komodo-agent/install.sh | sh
+```
+
+#### UNINSTALL
+
+```bash
+curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/komodo-agent/uninstall.sh | sh
+```
+
+#### UPDATE
+
+```bash
+curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/GARAGELAB.utils/main/docker/komodo-agent/update.sh | sh
+```
+
 ### POCKET-ID
 
 #### INSTALL
